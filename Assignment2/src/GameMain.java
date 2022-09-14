@@ -96,18 +96,18 @@ public class GameMain extends JPanel implements MouseListener{
 		board.paint(g);
 		
 		//set status bar message
-		if (currentState == GameState.Playing) {          
-			statusBar.setForeground(Color.BLACK);          
+		if (currentState == GameState.Playing) {
+			statusBar.setForeground(Color.BLACK);   
 			if (currentPlayer == Player.Cross) {   
 			
-				//TODO: use the status bar to display the message "X"'s Turn
-				statusBar.setText("Noughts it is your turn!");
+				//TODO: use the status bar to display the message "X"'s Turn 
+				statusBar.setText("Crosses it is your turn!");
 
 				
 			} else {    
 				
 				//TODO: use the status bar to display the message "O"'s Turn
-				statusBar.setText("Crosses it is your turn!");
+				statusBar.setText("Noughts it is your turn!");
 
 				
 			}       
@@ -116,10 +116,10 @@ public class GameMain extends JPanel implements MouseListener{
 				statusBar.setText("It's a Draw! Click to play again.");       
 			} else if (currentState == GameState.Cross_won) {          
 				statusBar.setForeground(Color.RED);          
-				statusBar.setText("'X' Won! Click to play again.");       
+				statusBar.setText("Crosses have won! Click to play again.");       
 			} else if (currentState == GameState.Nought_won) {          
 				statusBar.setForeground(Color.RED);          
-				statusBar.setText("'O' Won! Click to play again.");       
+				statusBar.setText("Noughts have won! Click to play again.");       
 			}
 		}
 		
